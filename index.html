@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Michael Liem - Data Scientist</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function calculateExperience(startDate) {
+            const start = new Date(startDate);
+            const today = new Date();
+            let diffYears = today.getFullYear() - start.getFullYear();
+            const diffMonths = today.getMonth() - start.getMonth() + (12 * (today.getFullYear() - start.getFullYear()));
+
+            if (today.getMonth() < start.getMonth()) {
+                diffYears--;
+            }
+
+            let yearsDisplay = diffYears > 0 ? diffYears + (diffYears == 1 ? " year " : " years ") : "";
+            let monthsDisplay = diffMonths % 12 > 0 ? (diffMonths % 12) + ((diffMonths % 12 == 1) ? " month" : " months") : "";
+            return yearsDisplay + monthsDisplay;
+        }
+
+        function displayExperience() {
+            const experience = calculateExperience('2022-12-01'); // Set your starting date here
+            document.getElementById('experience').innerText = " (" + experience + ")";
+        }
+    </script>
+</head>
+<body onload="displayExperience()">
+<div class="container">
+    <h1>Michael Liem</h1>
+    <h2>Data Scientist</h2>
+    <div class="contact-info">
+        <div class="details">
+            <ul>
+                <li>michaelliem1999@gmail.com</li>
+                <li>Linkedin: <a href="http://www.linkedin.com/in/michaelliem19">www.linkedin.com/in/michaelliem19</a></li>
+                <li>Portfolio: <a href="http://www.michaelliem.com">www.michaelliem.com</a></li>
+                <li>Github: <a href="http://github.com/Michaelliem99">github.com/Michaelliem99</a></li>
+            </ul>
+        </div>
+        <div class="location">
+            Jakarta Metropolitan Area
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Summary</h2>
+        <p>I am a computer science graduate with a passion for data analytics and machine learning. I have over three years of professional experience working as a data scientist across a range of business areas (pharmaceutical and financial services). Proficient in Python, SQL, and a range of data analysis and machine learning techniques, with experience in data visualization tools such as Metabase and Matplotlib.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Top Skills</h2>
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Metabase</div>
+            <div class="skill">Data Analysis</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Data Scraping</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Languages</h2>
+        <ul>
+            <li>English (Professional Working)</li>
+            <li>Indonesian (Native or Bilingual)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Certifications</h2>
+        <ul>
+            <li>IBM Data Science Specialization</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience">
+            <div class="experience-item">
+                <h3>Data Scientist</h3>
+                <p>DOKU, PT NUSA SATU INTI ARTHA</p>
+                <p><span class="experience-date">December 2022 - Present</span><span id="experience"></span></p>
+                <div class="details">
+                    <ul>
+                        <li>Crawled and scraped data from public websites and sources to support KYC and KYB processes.</li>
+                        <li>Conducted data analysis on various financial products with Matplotlib and Metabase.</li>
+                        <li>Assisted the business intelligence and product teams in efficiently utilizing Metabase and other data visualization tools.</li>
+                        <li>Employed data engineering tools to extract data from various raw sources, transforming it into a proper datamart for analysis.</li>
+                        <li>Researched and applied new machine learning tools and techniques for product prototyping.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item">
+                <h3>Data Scientist</h3>
+                <p>PT Kalbe Farma, Tbk</p>
+                <p>August 2021 - December 2022 (1 year 5 months)</p>
+                <p>Central Jakarta, Jakarta, Indonesia</p>
+                <div class="details">
+                    <ul>
+                        <li>Extract and analyze data from multiple sources (external websites and internal database), supporting business decision-making and research efforts</li>
+                        <li>Match doctor profile data from multiple sources with 75% accuracy</li>
+                        <li>Develop a product recommendation system prototype</li>
+                        <li>Develop a machine learning algorithm to predict which hospital should be visited by surgery salesmen on a biweekly basis</li>
+                        <li>Lowered supervised machine learning exploration time from 1 month to 1 week using AutoML tools</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item">
+                <h3>Data Science Intern</h3>
+                <p>PT Kalbe Farma, Tbk</p>
+                <p>February 2020 - February 2021 (1 year 1 month)</p>
+                <p>Central Jakarta, Jakarta, Indonesia</p>
+                <div class="details">
+                    <ul>
+                        <li>Writing script to acquire Kalbe Group's internal data and external data from different sources needed as a prototype of data ingestion engine</li>
+                        <li>Data cleansing on integrated internal data as needed in big data analysis project</li>
+                        <li>Creating a data science tools web application with Flask framework</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="education">
+            <div class="education-item">
+                <h3>Bachelor of Science - BS, Computer Science</h3>
+                <p>Universitas Bina Nusantara (Binus)</p>
+                <p>2017 - 2021</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>Copyright &copy; 2023 Michael Liem</p>
+</footer>
+</body>
+</html>
